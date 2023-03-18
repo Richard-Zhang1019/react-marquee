@@ -2,6 +2,7 @@ import { Box, Flex, keyframes } from '@chakra-ui/react'
 import { FaReact } from 'react-icons/fa'
 
 import { useAppSelector } from '@/store'
+import Marquee from '@/components/Marquee'
 
 const About = () => {
   const { value } = useAppSelector(state => state.count)
@@ -18,6 +19,9 @@ const About = () => {
       </Box>
       <h1>Yu-React-template</h1>
       <Box>redux count: {value}</Box>
+      <Marquee>
+        这是一段非常长长长长长长长长长长长长长长长长长长长长长长长长的文案
+      </Marquee>
     </Flex>
   )
 }
