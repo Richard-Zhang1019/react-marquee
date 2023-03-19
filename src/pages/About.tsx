@@ -19,8 +19,47 @@ const About = () => {
       </Box>
       <h1>Yu-React-template</h1>
       <Box>redux count: {value}</Box>
+      <h1>鸣谢</h1>
       <Marquee>
-        这是一段非常长长长长长长长长长长长长长长长长长长长长长长长长的文案
+        <Flex gap={20}>
+          {Array(10)
+            .fill(1)
+            .map((item, index) => {
+              return (
+                <Flex
+                  key={index}
+                  w={100}
+                  h={100}
+                  bgColor="#1c6666"
+                  justifyContent="center"
+                  alignItems="center"
+                >
+                  {index + 1}
+                </Flex>
+              )
+            })}
+        </Flex>
+      </Marquee>
+      <h1>赞助商</h1>
+      <Marquee direction='right' duration={10}>
+        <Flex gap={20}>
+          {Array(10)
+            .fill(1)
+            .map((item, index) => {
+              return (
+                <Flex
+                  key={index}
+                  w={100}
+                  h={100}
+                  bgColor="#1c6666"
+                  justifyContent="center"
+                  alignItems="center"
+                >
+                  {index + 1}
+                </Flex>
+              )
+            })}
+        </Flex>
       </Marquee>
     </Flex>
   )
